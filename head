@@ -1,0 +1,29 @@
+<html> 
+<head>
+<meta charset="UTF-8"/>
+<meta description="ZTea Adapted File"/>
+<style>
+span{
+color:#000080;
+}
+div#main{
+max-width: 80%;
+margin-left:10%;
+}
+p::first-letter {
+font-size:1.2em;
+}
+p{
+text-indent:5%;
+margin:0;
+border:0;
+padding:0;
+}
+</style>
+<script>
+function translate(id) {
+    alert(document.getElementById(id).innerHTML)
+}
+</script>
+</head>
+<body><div id="main"> 

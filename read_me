@@ -1,0 +1,35 @@
+    This script take path to a file as sole argument.
+Than searches file for '[' characters if found it search for ']'.
+Line between square brackets is the line to construct java script
+function call inside <span> elemet and create new <pre> which
+holds translation of word found immidatly after [.
+Example:
+This [line - линия] is about to be translated.
+Converted to <span onclick="translate('line')">line</span>
+New lines attached to file:
+<pre>line
+line</pre>
+    Note: First '-' character inside brackets converted to new
+    linefeed. Inside file  it is possible to format what
+    javascript alert box will show by creating preformated text
+    by separating lines. New line is goig to be new line:
+Example:
+[word-long
+word
+definition]
+New lines attached to file:
+<pre>word
+long
+word
+definition</pre>
+After all this transformations text is wraped in head and bottom files. Resulting new HTML File with same name as original. File structure: head, transformed text, bottom.
+No checks for wrong input or errors is performed. Format of insertions must be exact [word - lines of definition], no nesting
+of a brackets is allowed.
+Please note that, since resulting file is html file, all
+charachters  that have special meaning in html foramat will be 
+translated accordingly. 
+So to create paragraph it must be between two <p></p> html tags.
+Inside head file is primitive CSS markup for resulting page.
+To use script go to folder with the script and type:
+python file_adapter.py name_of_file 
+  
